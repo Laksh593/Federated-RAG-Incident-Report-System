@@ -1,0 +1,62 @@
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# ==========================================
+# Node & Frontend Build Artifacts
+# ==========================================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.eslintcache
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# ==========================================
+# Temporary Files & Uploads
+# ==========================================
+temp_uploads/*
+!temp_uploads/.gitkeep
+*.tmp
+
+# ==========================================
+# Logs & System Files
+# ==========================================
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Vector Database & Local Persistent Cache
+# ==========================================
+data/vector_store/
+*.sqlite3
+*.pkl
+
+# ==========================================
+# Large PyTorch Model Checkpoints (>100 MB GitHub Limit)
+# ==========================================
+model/checkpoints/*.pt
+!model/checkpoints/.gitkeep

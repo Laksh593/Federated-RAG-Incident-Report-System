@@ -1,0 +1,15 @@
+SECURITY PROTOCOL: UNAUTHORIZED DRONE / UAV INCURSION (CODE SKIES)
+
+1. DETECTION
+   - Ensure the drone is actually within restricted airspace (typically within 500 feet of the facility perimeter).
+   - Document the drone's physical description (size, color, number of rotors, any visible payload or camera).
+   - Note the direction from which the drone originated and the direction it travels.
+
+2. RESPONSE ACTIONS
+   - Do NOT attempt to shoot down, physically intercept, or jam the drone's signal unless authorized by federal aviation authorities (e.g., FAA).
+   - Notify the shift supervisor and the local aviation authority immediately.
+   - If the drone appears to be conducting surveillance, lockdown sensitive outdoor areas (e.g., loading docks, outdoor testing facilities).
+   - Dispatch a security sweep team to search the immediate perimeter (up to 2 miles) for the drone operator.
+
+3. REPORTING
+   - File an incident report documenting the exact time, duration, and behavior of the drone. Provide any video evidence captured by ground cameras.

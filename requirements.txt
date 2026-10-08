@@ -1,0 +1,17 @@
+numpy<2
+torch>=2.0
+transformers>=4.38.0
+sentence-transformers>=3.0.0
+chromadb
+rank-bm25
+langchain-text-splitters
+Pillow
+rich
+fastapi
+uvicorn
+pydantic
+python-multipart
+imageio-ffmpeg
+requests
+opencv-python
+python-dotenv

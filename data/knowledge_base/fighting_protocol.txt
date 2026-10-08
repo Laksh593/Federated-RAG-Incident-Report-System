@@ -1,0 +1,18 @@
+SECURITY PROTOCOL: FIGHTING / PHYSICAL ALTERCATION
+
+1. IMMEDIATE RESPONSE
+   - Upon detection of fighting or physical violence, the security operator must immediately notify local law enforcement.
+   - Do not attempt to intervene physically unless necessary to prevent loss of life.
+   - Use the PA system (if available) to issue a verbal warning to cease hostilities.
+
+2. DOCUMENTATION
+   - Log the exact start and end time of the altercation.
+   - Preserve video footage of the incident and 5 minutes prior/post.
+   - Note the number of individuals involved and descriptive features.
+
+3. POST-INCIDENT
+   - File a Level 1 Incident Report within 1 hour.
+   - Medical assistance should be summoned immediately if injuries are apparent.
+   - Isolate the area until law enforcement arrives to preserve evidence.
+
+REF: SEC-POL-001-FIGHT

@@ -1,0 +1,63 @@
+{
+  "training_method": "Clustered Federated Learning",
+  "dataset": "UCF Crime Dataset",
+  "model": "C3D + MIL Classifier",
+  "final_metrics": {
+    "accuracy": 90.7,
+    "precision": 90.7,
+    "recall": 100.0,
+    "f1_score": 95.12,
+    "loss": 1.8107
+  },
+  "training_config": {
+    "rounds": 5,
+    "clients": 13,
+    "clusters": 5,
+    "local_epochs": 3
+  },
+  "history": {
+    "rounds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "accuracy": [
+      90.7,
+      90.7,
+      90.7,
+      90.7,
+      90.7
+    ],
+    "loss": [
+      0.3679,
+      0.4662,
+      0.923,
+      1.3472,
+      1.8107
+    ],
+    "f1": [
+      95.12,
+      95.12,
+      95.12,
+      95.12,
+      95.12
+    ],
+    "training_time_min": [
+      21.6,
+      15.7,
+      20.3,
+      21.0,
+      13.6
+    ]
+  },
+  "cluster_names": [
+    "Violence",
+    "Property",
+    "Destruction",
+    "Other",
+    "Normal"
+  ],
+  "timestamp": "2026-01-21T03:01:22.541487"
+}

@@ -1,0 +1,16 @@
+SECURITY PROTOCOL: VANDALISM / PROPERTY DAMAGE
+
+1. OBSERVATION
+   - If vandalism is observed in progress, record the perpetrators' features (clothing, height, etc.).
+   - Issues a verbal warning via PA system: "Security has been alerted. Please leave the area."
+
+2. ACTION
+   - Dispatch nearest security guard to the location to assess damage.
+   - Notify facilities management for cleanup/repair estimation.
+   - If perpetrators are still present, contact law enforcement.
+
+3. REPORTING
+   - File a Property Damage Report (Form 2B).
+   - Attach snapshots of the damage and the perpetrators.
+
+REF: SEC-POL-002-VANDAL

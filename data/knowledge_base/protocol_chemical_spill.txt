@@ -1,0 +1,17 @@
+SECURITY PROTOCOL: HAZARDOUS MATERIAL / CHEMICAL SPILL (CODE ORANGE)
+
+1. ISOLATION
+   - Immediately evacuate all personnel from the immediate vicinity of the spill.
+   - Do not attempt to clean up the spill unless you are specifically trained and equipped with the correct Personal Protective Equipment (PPE) for the identified chemical.
+   - Close doors to the affected area to isolate fumes or vapors.
+
+2. IDENTIFICATION
+   - Attempt to identify the spilled substance from a safe distance (e.g., reading labels, manifesting). Ensure the Safety Data Sheet (SDS) is retrieved.
+   - Notify the facility Hazardous Materials (HAZMAT) response team and the environmental health and safety (EHS) officer.
+
+3. CONTAINMENT AND NOTIFICATION
+   - If trained and safe to do so, shut off HVAC systems in the affected zone to prevent the spread of toxic fumes.
+   - If the spill is highly toxic, flammable, or exceeds 5 gallons, immediately pull the fire alarm to trigger a building-wide evacuation and call 911.
+
+4. CLEANUP
+   - Only authorized HAZMAT contractors or properly equipped internal teams may commence cleanup operations following the specific SDS guidelines for the chemical.

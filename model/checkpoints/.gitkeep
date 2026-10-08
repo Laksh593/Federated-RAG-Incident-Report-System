@@ -1,0 +1,2 @@
+# Keep model/checkpoints directory structure in git
+# Place trained cfl_latest.pt in this directory for local inference

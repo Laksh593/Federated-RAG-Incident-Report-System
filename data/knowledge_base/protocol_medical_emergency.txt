@@ -1,0 +1,19 @@
+SECURITY PROTOCOL: MEDICAL EMERGENCY / CARDIAC EVENT (CODE BLUE)
+
+1. IMMEDIATE ASSESSMENT
+   - Verify the nature of the medical emergency. Check for responsiveness, breathing, and pulse if trained to do so.
+   - Do not move the victim unless they are in immediate, life-threatening danger (e.g., fire, collapsing structure).
+
+2. ACTIVATION
+   - Call emergency medical services (EMS) immediately (911).
+   - Notify the on-site medical response team or designated CPR/AED trained personnel via radio.
+   - Retrieve the nearest Automated External Defibrillator (AED) and First Aid kit.
+
+3. INTERVENTION
+   - If the victim is unresponsive and not breathing normally, begin CPR immediately (hard and fast in the center of the chest).
+   - Turn on the AED and follow the voice prompts.
+   - Clear the area of unnecessary personnel to afford the victim privacy and to allow EMS unimpeded access.
+
+4. POST-INCIDENT
+   - Assign a staff member to meet EMS at the main entrance to guide them quickly to the victim.
+   - Secure any personal belongings of the victim and document the actions taken before EMS arrival.

@@ -1,0 +1,123 @@
+i made the half of the project and remaining part you have to make below is the explaination of the project flow 
+Complete Data Flow
+Scenario: User Uploads Violence Video
+1. FRONTEND
+   └─> User selects "Default", uploads 30-sec video, clicks Generate, default means user dont known the whats happening in the video so use the model to identify otherwise if user selects any other incident type then use that as the reference, you always have to cross check the incident with the help of ai model or gpt api key or an llm model
+   
+2. BACKEND - VIDEO UPLOAD
+   └─> Save to temp_uploads/
+   └─> Validate/Convert to MP4 if needed
+   
+3. BACKEND - ANOMALY DETECTION
+   └─> Load CFL PyTorch model
+   └─> Extract 16 frames from video
+   └─> Run through 3D CNN + MIL classifier
+   └─> Output: "Assault" (95% confidence)
+   └─> Override user selection: type = "Assault"
+   
+4. BACKEND - RAG RETRIEVAL
+   └─> Query: "Assault handling procedure security policy"
+   └─> ChromaDB: Find 15 relevant chunks from fighting_protocol.txt
+   └─> BM25: Keyword matches for "assault", "violence", "response"
+   └─> Cross-Encoder re-ranks: Keep top 5
+   └─> Context: {chunk1, chunk3, chunk5, ...}
+   
+5. BACKEND - REPORT GENERATION
+   └─> Extract 3 key frames from video (00s, 15s, 30s)
+   └─> Convert to base64
+   └─> Call OpenRouter API with:
+       • Multimodal prompt
+       • Video frames (base64)
+       • Retrieved policies
+       • Incident metadata
+   └─> Gemini 3.1 generates detailed report
+   
+6. FRONTEND - DISPLAY
+   └─> Receive markdown report
+   └─> Render with formatted tables, sections, recommendations
+   └─> User can copy/save report
+   
+7. CLEANUP
+   └─> Delete temp video files
+   └─> Keep report in browser session
+
+i made this project  in way like i created 15 clients as camera nodes and created 5 clusters to group the similar kind of incident like 
+cluster 0 (Violence): Fighting, Assualt, Shooting, Abuse
+cluster 1 (Property ): Burglary, Robbery, Shoplifting, Stealing
+cluster 2 (Destruction): Arson, Explosion, Vandalism
+cluster 3 (Other): Arrest, RoadAccidents
+Cluster 4 (Normal): NormalVideos
+and with each cluster there are 3 clients and i split the data between clients in each cluster and then i train the model using clustered federated learning and got the accuracy of 85% so for eg: if i give input of a video that have shooting incident so my model give anomaly type as violence because i clustered the similar kind of data in one and as follows for other clusters also till now i made this and
+after this you have make the remaining project in report generation it should be specific about the incident type like vandalism, assualt, explosion so that you should use help of any gpt api key or llm (which ever gives the faster response) to identify specific incident and what happening in the video like eg: a vandalism occurred within the church and a unidentified individual person pushed over a large wooden crucifix, causing significant damage to the church property so this comes in the incident summary in report
+Inference Process:
+1. Load trained model from checkpoint
+2. Extract 16 equally-spaced frames from video
+3. Resize to 224×224
+4. Normalize to [-1, 1]
+5. Pass through 3D CNN → get 512-dim features
+6. Apply MIL + Temporal Attention
+7. Output predicted anomaly class + confidence
+so i have done only model training part after this you have to created a Frontend (React + Vite) and backend
+Frontend Layout should be 
+Purpose: User interface for submitting incidents information and viewing reports
+1. Header Section
+* Logo: "🛡️ AI Report Generator" with branding
+* Status badge showing "System Online"
+* Sticky navigation that stays visible when scrolling
+ 
+2. Main Layout (Two-Column Grid)
+Left Panel - Input Form:
+* Incident Type Selection: 7 clickable chips for quick selection:
+ (Default, Fighting, Vandalism, Shooting, Robbery, Theft, Fire/Hazard)
+* Location Text Field user have to enter the incident location if user enter nothing then it means location is unknown
+ 
+* Description Field: Text area (5 rows) for detailed incident description
+* Video Upload: file input accepting .mp4, .mov, .avi files
+* Timestamp Display: Auto-shows current date/time
+* Generate Button: Triggers report generation (shows loading spinner with ⟳ animation while processing)
+* Error Handling: Displays error messages if API fails (5-min timeout for large videos)
+
+Right Panel - Report Output:
+* Initially shows empty state ("📋 No report generated yet")
+* Displays generated markdown report once available
+ 
+3. Footer
+* Simple tagline: "Federated RAG · Privacy-Preserving Incident Intelligence"
+
+Backend API (FastAPI)
+Purpose: Orchestrates the entire incident report generation workflow
+RAG Pipeline (Knowledge-Based Report Generation)
+Purpose: Generate contextual, policy-aligned incident reports using knowledge base
+Component 1: Retriever (Hybrid Search)
+Create Knowledge Base: for all the incident type
+Retrieval Pipeline:
+1. Chunk Documents: Break policy files into 512-char chunks with overlap
+2. Embed Chunks:
+   * Generate embeddings using sentence-transformers (all-MiniLM-L6-v2)
+   * Store in ChromaDB (persistent vector database)
+3. Hybrid Search (Combines 2 methods):
+   * Dense Search (Vector): ChromaDB cosine similarity search
+   * Sparse Search (BM25): Keyword/term frequency matching
+   * Fusion: Reciprocal Rank Fusion (RRF) combines both rankings
+4. Re-ranking (Cross-Encoder):
+   * Top 15 candidates from hybrid search
+   * Re-ranked by cross-encoder/ms-marco-MiniLM-L-6-v2
+   * Returns top 5 most relevant
+
+Component 2: Generator (LLM-Powered Report Creation)
+LLM Used:use best llm for report generation like ollama llm models or any other llm which best suite for this project
+
+so short I have already explained the project and its functionality. So far, I have completed only the model training phase. For training, I used the UCF dataset and implemented a 3D CNN model.
+On the frontend, if the user selects the default option, the system should use the trained model to detect and classify the type of anomaly present in the input. Based on this classification, a detailed report must be generated.
+Alternatively, if the user selects specific incident types such as assault or explosion, the system should generate a report specifically tailored to the selected category.
+Regarding the location field in the frontend:
+	•	If the user provides a location, the report should include and reflect that specific location.
+	•	If the location field is left empty, it should be marked as “Unknown” in the report.
+If the user provides a description of the incident, the system should use that information as contextual input while generating the report.
+The generated report should include the following sections:
+	1.	Incident Summary
+	2.	Location and Timestamp
+	3.	Relevant Policy Citations
+	4.	Recommended Immediate Actions (focused on urgent response)
+	5.	Conclusion
+Additionally, if there are any other important or relevant details that should be included to enhance the overall project and report generation, please suggest.
